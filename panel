@@ -1,0 +1,24 @@
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.util.Random;
+import javax.swing.JPanel;
+
+public class Panel extends JPanel{
+    public void paint(Graphics g){
+    Font font = new Font("Arial",1,150);
+    g.setFont(font);
+   /* g.setColor(Color.GREEN);
+    g.drawString("ISC", 150, 255);
+    g.setColor(Color.BLACK);
+    g.drawString("ISC", 140, 250);*/
+   Random rn = new Random();
+   int x=200;
+   for(int i = 100; i<200; i+=5){
+  g.setColor(new Color (rn.nextInt(255),rn.nextInt(255),rn.nextInt(255)));
+   g.drawString("ISC", i, x);
+   x+=5;
+   }
+     }
+}
